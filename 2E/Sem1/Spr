@@ -1,0 +1,143 @@
+//Zad.-1
+//bool z(int x)
+//{
+//    for (int i = 1; i < x; i++)
+//    {
+//        if (x % i == 0)
+//        {
+//            return true;
+//        }
+//    }
+//    return false;
+//}
+
+//int nwd(int a, int b)
+//{
+//    while (a != b)
+//    {
+//        if (a > b)
+//        {
+//            a = a - b;
+//        }
+//        else
+//        {
+//            b = b - a;
+//        }
+//        return a;
+//    }
+//}
+
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+//if (z(nwd(a, b)) == true)
+//{
+//    Console.WriteLine("Para liczb jest parą Ibrahima");
+//}
+//else
+//{
+//    Console.WriteLine("Para liczb nie jest parą Ibrahima");
+//}
+
+//Zad.0
+//bool z(int x)
+//{
+//    for (int i = 2; i < x; i++)
+//    {
+//        if (x % i != 0)
+//        {
+//            return true;
+//        }
+//    }
+//    return true;
+//}
+
+//int nwd(int a, int b)
+//{
+//    while (a != b)
+//    {
+//        if (a > b)
+//        {
+//            a = a - b;
+//        }
+//        else
+//        {
+//            b = b - a;
+//        }
+//        return a;
+//    }
+//}
+
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+
+//for (int i = 20; i < 51; i++)
+//{
+//    for (int j = 51; j > 20; j++)
+//    {
+//        if (z(nwd(a, b)) == true)
+//        {
+//            Console.WriteLine($"{i} ,{j}");
+//        }
+//    }
+//}
+
+//Zad.4
+//Robiłam zadania.
+
+//Zad.1
+//int n = int.Parse(Console.ReadLine());
+//int[,]T = new int[n, n];
+//Random r = new Random();
+//for (int i = 0; i < n; i++)
+//{
+//    for (int j = 0; j < n; j++)
+//    {
+//        if (i == 0 || j == 0)
+//        {
+//            T[i, j] = r.Next(0);
+//        }
+//        if (i == 1 || j == 1)
+//        {
+//            T[i, j] = r.Next(0);
+//        }
+//        if (i == 2 || j == 2)
+//        {
+//            T[i, j] = r.Next(0);
+//        }
+//        if (i == 3 || j == 3)
+//        {
+//            T[i, j] = r.Next(0);
+//        }
+//        if (i == 4 || j == 4)
+//        {
+//            T[i, j] = r.Next(0);
+//        }
+//        if (i == 5 || j == 5)
+//        {
+//            T[i, j] = r.Next(1);
+//        }
+//        if (i == 6 || j == 6)
+//        {
+//            T[i, j] = r.Next(1);
+//        }
+//        if (i == 7 || j == 7)
+//        {
+//            T[i, j] = r.Next(2);
+//        }
+//        if (i == 8 || j == 8)
+//        {
+//            T[i, j] = r.Next(2);
+//        }
+//        if (i == 9 || j == 9)
+//        {
+//            T[i, j] = r.Next(3, 4);
+//        }
+//    }
+//}
+
+//Zad.3
+//int n = int.Parse(Console.ReadLine());
+//for (int i = 2; i < 101; i++)
+//{
+
+//}
