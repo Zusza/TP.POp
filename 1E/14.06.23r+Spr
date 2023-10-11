@@ -1,0 +1,655 @@
+///Rozgrzewka
+///Zad.1-Znajdź maksymalny element w tablicy.
+//Random r = new Random();
+//int[] L = new int[40];
+//int maks = 0;
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    L[i] = r.Next(10,100);
+//    //Console.WriteLine(L[i]);
+//}
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    if (L[i] > maks)
+//    {
+//        maks = L[i];
+//    }
+//}
+//Console.WriteLine(maks);
+
+///Zad.2-Znajdź minimalny element w tablicy.
+//Random r = new Random();
+//int[] L = new int[40];
+//int min = 101;
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    L[i] = r.Next(10, 100);
+//    Console.WriteLine(L[i]);
+//}
+
+//for (int i = 1; i < L.Length; i++)
+//{
+//    if (L[i] < min)
+//    {
+//        min = L[i];
+//    }
+//}
+//Console.WriteLine(min);
+
+///Zad.3-Znajdź vice-maksymalny element w tablicy.
+//Random r = new Random();
+//int[] T = new int[40];
+//int m = 0;
+//int vm = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    if (T[i] > m)
+//    {
+//        vm = m;
+//        m = T[i];
+//    }
+//    else if (T[i] > vm && T[i] < m)
+//    {
+//        vm = T[i];
+//    }
+//}
+//Console.WriteLine("Vice-max: " + vm);
+
+///Zad.4-Znajdź vice-minimalny element w tablicy.
+//Random r = new Random();
+//int[] T = new int[40];
+//int mi = 9999;
+//int vmi = 9999;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    if (T[i] < mi)
+//    {
+//        vmi = mi;
+//        mi = T[i];
+//    }
+//    else if (T[i] < vmi && T[i] > mi)
+//    {
+//        vmi = T[i];
+//    }
+//}
+//Console.WriteLine("Vice-min: " + vmi);
+
+///Zad.5-Podaj ile razy występuje maksymalny element w tablicy.
+//Random r = new Random();
+//int[] L = new int[40];
+//int maks = 0;
+//int x = 0;
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    L[i] = r.Next(10, 100);
+//    //Console.WriteLine(L[i]);
+//}
+
+//for (int i = 1; i < L.Length; i++)
+//{
+//    if (L[i] > maks)
+//    {
+//        maks = L[i];
+//    }
+//}
+//for (int j = 1; j < L.Length; j++)
+//{
+//    if (L[j] == maks)
+//    {
+//        x +=1;
+//    }
+//}
+//Console.WriteLine(x);
+
+///Zad.6-Podaj ile razy występuje minimalny element w tablicy.
+//Random r = new Random();
+//int[] L = new int[40];
+//int min = 101;
+//int x = 0;
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    L[i] = r.Next(10, 100);
+//    Console.WriteLine(L[i]);
+//}
+
+//for (int i = 0; i < L.Length; i++)
+//{
+//    if (L[i] < min)
+//    {
+//        min = L[i];
+//    }
+//}
+//for (int j = 0; j < L.Length; j++)
+//{
+//    if (L[j] == min)
+//    {
+//        x++;
+//    }
+//}
+//Console.WriteLine(x);
+
+///Zad.7-Podaj sumę elementów w tablicy
+//Random r = new Random();
+//int[] T = new int[40];
+//int suma = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//    suma += T[i];
+//}
+//Console.WriteLine("Suma: " + suma);
+
+///Zad.8-Podaj średnią elementów w tablicy z dokładnością do 1 miejsca po przecinku
+//Random r = new Random();
+//int[] T = new int[40];
+//int suma = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//    suma += T[i];
+//}
+
+//double sr = (double)suma / T.Length;
+//sr = Math.Round(sr, 1);
+//Console.WriteLine("Średnia elementów: " + sr);
+
+///Zad.9-Podaj sumę elementów tablicy znajdujących się pod indeksami parzystymi (T[0] +T[2] + T[4] + ... )
+//Random r = new Random();
+//int[] T = new int[40];
+//int suma = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 0; i < T.Length; i += 2)
+//{
+//    suma += T[i];
+//}
+//Console.WriteLine("Suma: " + suma);
+
+///Zad.10-Podaj średnią elementów tablicy znajdujących się pod indeksami nieparzystymi
+//Random r = new Random();
+//int[] T = new int[40];
+//int suma = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 1; i < T.Length; i += 2)
+//{
+//    suma += T[i];
+//}
+//Console.WriteLine("Suma: " + suma);
+
+///Zad.11-Podaj rozpiętość tablicy.
+//Random r = new Random();
+//int[] T = new int[40];
+//int mi = T[0];
+//int mx = T[0];
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 1; i < T.Length; i++)
+//{
+//    if (T[i] < mi)
+//    {
+//        mi = T[i];
+//    }
+//    if (T[i] > mx)
+//    {
+//        mx = T[i];
+//    }
+//}
+//int roz = mx - mi + 1;
+//Console.WriteLine("Rozpiętość: " + roz);
+
+///Zad.12-Podaj ilość tych elementów w tablicy, które występują jeden raz (niepowtarzające się)
+//Random r = new Random();
+//int[] T = new int[40];
+//int[] W = new int[90];
+//int ilo = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//    W[T[i] - 10]++;
+//}
+
+//for (int i = 0; i < W.Length; i++)
+//{
+//    if (W[i] == 1)
+//    {
+//        ilo++;
+//    }
+//}
+//Console.WriteLine("Ilość: " + ilo);
+
+///Zad.13-Wypisz te liczby dwucyfrowe, które nie występują w tablicy.
+//Random r = new Random();
+//int[] T = new int[40];
+//bool[] p = new bool[90];
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    p[T[i] - 10] = true;
+//}
+
+//Console.WriteLine("Liczby niewystępujące:");
+
+//for (int i = 0; i < p.Length; i++)
+//{
+//    if (!p[i])
+//    {
+//        Console.Write(i + 10 + ", ");
+//    }
+//}
+
+///Zad.14-Podaj ilość elementów, które należałoby usunąć z tablicy, aby zostały w niej wartości unikalne (niepowtarzające się)
+//Random r = new Random();
+//int[] T = new int[40];
+//int ilo = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    Console.WriteLine(T[i]);
+//}
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    for (int j = i + 1; j < T.Length; j++)
+//    {
+//        if (T[i] == T[j])
+//        {
+//            ilo++;
+//            break;
+//        }
+//    }
+//}
+//Console.WriteLine("Ilość elementów do usunięcia: " + ilo);
+
+///Zadania normalne
+///Zad.1-Gr.1-Wczytaj do tablicy / listy wszystkie dzielniki podanej przez usera liczby n oraz w osobnej pętli wyświetl zawartość powstałej tablicy / listy.
+//int n = int.Parse(Console.ReadLine());
+//int[] d = new int[n];
+//int di = 0;
+//for (int i = 1; i <= n; i++)
+//{
+//    if (n % i == 0)
+//    {
+//        d[di] = i;
+//        di++;
+//    }
+//}
+//for (int j = 0; j < di; j++)
+//{
+//    Console.WriteLine(d[j]);
+//}
+
+///Zad.2-Wczytaj do tablicy 20 losowych trzycyfrowych liczb złożonych (to te które nie są pierwsze) niepodzielnych przez 2 i 7
+//Random r = new Random();
+//int[] l = new int[20];
+//int li = 0;
+//while (li < 20)
+//{
+//    int la = r.Next(100, 1000);
+//    if (!Cp(la) && la % 2 != 0 && la % 7 != 0)
+//        l[li++] = la;
+//}
+//foreach (int la in l)
+//{
+//    Console.WriteLine(la);
+//}
+//bool Cp(int la2)
+//{
+//    if (la2 < 2) return false;
+//    for (int i = 2; i <= Math.Sqrt(la2); i++)
+//        if (la2 % i == 0) return false;
+//    return true;
+//}
+
+///Zad.3-Wygeneruj tablicę 40 losowych liczb dwucyfrowych. Znajdź sumę tych liczb, które występują dokładnie 2 razy.
+//Random rand = new Random();
+//int[] T = new int[40];
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = rand.Next(10, 100);
+//}
+//foreach (int i in T)
+//{
+//    System.Console.WriteLine(i);
+//}
+
+//bool CzyDwaRazy(int index)
+//{
+//    int ile = 1;
+//    for (int i = 0; i < T.Length; i++)
+//    {
+//        if (T[index] == T[i] && index != i) ile++;
+//    }
+//    if (ile == 2) return true;
+//    else return false;
+//}
+
+//ArrayList arrayList = new ArrayList();
+//int suma = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    if (CzyDwaRazy(i) && !arrayList.Contains(T[i]))
+//    {
+//        arrayList.Add(T[i]);
+//        suma += (T[i] * 2);
+//    }
+//}
+//Console.Write("Suma:" + suma);
+
+///Zad.4-Wygeneruj macierz 11x11 dowolnych cyfr. Znajdź sumę cyfr znajdujących się na najdłuższych przekątnych (diagonalach) macierzy. Uwaga: Elementu środkowego (wspólnego dla obu przekątnych nie licz dwa razy) 
+//int[,] M = new int[11, 11];
+//Random r = new Random();
+//int sum = 0;
+
+//for (int i = 0; i < 11; i++)
+//{
+//    for (int j = 0; j < 11; j++)
+//    {
+//        M[i, j] = r.Next(0, 10);
+//    }
+//}
+
+//for (int i = 0; i < 11; i++)
+//{
+//    sum += M[i, i];
+//    if (i != 5)
+//        sum += M[i, 10 - i];
+//}
+
+//Console.WriteLine("Suma: " + sum);
+
+
+//////int wielkosc = 11;
+
+//////int[,] M = new int[wielkosc, wielkosc];
+
+//////Random rand = new Random();
+
+//////for (int i = 0; i < wielkosc; i++)
+//////{
+//////    for (int j = 0; j < wielkosc; j++)
+//////    {
+//////        M[i, j] = rand.Next(0, 10);
+//////    }
+//////}
+
+//////int suma = 0;
+
+//////for (int i = 0; i < wielkosc; i++)
+//////{
+//////    for (int j = 0; j < wielkosc; j++)
+//////    {
+//////        if (i == j) suma += M[i, j];
+//////        else if (i + j == wielkosc - 1) suma += M[i, j];
+//////    }
+//////}
+
+//////for (int i = 0; i < wielkosc; i++)
+//////{
+//////    for (int j = 0; j < wielkosc; j++)
+//////    {
+//////        Console.Write(M[i, j] + "\t");
+//////    }
+//////    Console.WriteLine();
+//////}
+//////Console.WriteLine(suma);
+
+///Zad.1-Gr.1-User podaje dowolną liczbę dwucyfrową k. Wczytaj do tablicy / listy wszystkie trzycyfrowe wielokrotności k oraz w osobnej pętli wyświetl zawartość powstałej tablicy / listy.
+//int k = int.Parse(Console.ReadLine());
+
+//int[] T = new int[900 / k + 1];
+//int w = 0;
+
+//for (int i = 100; i <= 999; i++)
+//{
+//    if (i % k == 0)
+//    {
+//        T[w] = i;
+//        w++;
+//    }
+//}
+
+//for (int i = 0; i < w; i++)
+//{
+//    Console.WriteLine(T[i]);
+//}
+
+///Zad.2-Wczytaj do tablicy 20 losowych trzycyfrowych liczb o sumie cyfr przynajmniej 18 i niepodzielnych przez 2 lub 7
+//Random r = new Random();
+//int[] T = new int[20];
+//int sum = 0;
+//int SumaCyfr(int i)
+//{
+//    int sum = 0;
+//    while (i != 0)
+//    {
+//        sum += i % 10;
+//        i /= 10;
+//    }
+//    return sum;
+//}
+
+//while (sum < 20)
+//{
+//    int rn = r.Next(100, 1000);
+//    if (SumaCyfr(rn) >= 18 && (rn % 2 != 0 && rn % 7 != 0))
+//    {
+//        T[sum] = rn;
+//        sum++;
+//    }
+//}
+
+//foreach (int i in T)
+//{
+//    Console.WriteLine(i);
+//}
+
+///Zad.3-Wygeneruj tablicę 90 losowych liczb dwucyfrowych. Znajdź sumę tych liczb dwucyfrowych, których nie ma w tej tablicy.
+//Random r = new Random();
+//int[] T = new int[90];
+//int sum = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(10, 100);
+//    sum += T[i];
+//}
+
+//int[] D = new int[90];
+//int x = 0;
+
+//for (int i = 10; i < 100; i++)
+//{
+//    bool f = false;
+
+//    for (int j = 0; j < T.Length; j++)
+//    {
+//        if (T[j] == i)
+//        {
+//            f = true;
+//            break;
+//        }
+//    }
+
+//    if (!f)
+//    {
+//        D[x] = i;
+//        sum += i;
+//        x++;
+//    }
+//}
+
+//Console.WriteLine("Suma: " + sum);
+
+///Zad.4-Wygeneruj macierz 15x15 dowolnych cyfr. Znajdź sumę cyfr znajdujących się w ramce tej macierzy. Chodzi o elementy z pierwszego i ostatniego wiersza oraz pierwszej i ostatniej kolumny
+//int[,] M = new int[15, 15];
+//Random r = new Random();
+//int sum = 0;
+
+//for (int i = 0; i < 15; i++)
+//{
+//    for (int j = 0; j < 15; j++)
+//    {
+//        M[i, j] = r.Next(0, 10);
+//    }
+//}
+
+//for (int i = 0; i < 15; i++)
+//{
+//    sum += M[0, i];
+//    sum += M[14, i];
+//    sum += M[i, 0];
+//    sum += M[i, 14];
+//}
+
+//Console.WriteLine("Suma: " + sum);
+
+Zadania ze spr (14.06.23)
+///Zad.1-Podaj f i g i wypisz trzycyfrowe wielokrotności różnicy g i f (różnica dodatnia nawet gdy f > g)
+//int f = int.Parse(Console.ReadLine());
+//int g = int.Parse(Console.ReadLine());
+//int[] T = new int[999];
+//int d = g - f;
+//for (int i = 1; i < T.Length; i++)
+//{
+//    int h = d * i;
+//    if (h > 99 && h < 999)
+//    {
+//        T[i] += h;
+//    }
+//}
+
+//foreach (int i in T)
+//{
+//    Console.WriteLine(i);
+//}
+///Zad.2
+//int[] T = new int[20];
+//Random r = new Random();
+//int x = 0;
+
+//bool cp(int i)
+//{
+//    while (i > 0)
+//    {
+//        int d = i % 10;
+//        if (d % 2 != 0)
+//        {
+//            return false;
+//        }
+//        i /= 10;
+//    }
+//    return true;
+//}
+//bool nd(int j)
+//{
+//    return j % 10 == 0;
+//}
+
+//while (x < 20)
+//{
+//    int c = r.Next(100, 1000);
+//    if (cp(c) && !nd(c))
+//    {
+//        T[x] = c;
+//        x++;
+//    }
+//}
+//foreach (int i in T)
+//{
+//    Console.WriteLine(i);
+//}
+
+//Zad.3
+//using System;
+//using System.Collections;
+
+//Random r = new Random();
+//int[] T = new int[1200];
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    T[i] = r.Next(100, 1000);
+//}
+//foreach (int i in T)
+//{
+//    System.Console.WriteLine(i);
+//}
+
+//bool cdr(int index)
+//{
+//    int ile = 1;
+//    for (int i = 0; i < T.Length; i++)
+//    {
+//        if (T[index] == T[i] && index != i) ile++;
+//    }
+//    if (ile == 3)
+//    {
+//        return true;
+//    }
+//    else
+//    {
+//        return false;
+//    }
+//}
+
+//ArrayList arrayList = new ArrayList();
+//int suma = 0;
+//int ilo = 0;
+
+//for (int i = 0; i < T.Length; i++)
+//{
+//    if (cdr(i) && !arrayList.Contains(T[i]))
+//    {
+//        arrayList.Add(T[i]);
+//        suma += (T[i] * 3);
+//        ilo += 1;
+//    }
+//}
+//Console.WriteLine("Suma:" + suma);
+//Console.WriteLine("Ilość: " + ilo);
+
+Zad.4 - Macież NxN i podaj sumę drugiej ramki (odejmowanie od 1 ramki)
