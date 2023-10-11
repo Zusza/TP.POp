@@ -1,0 +1,70 @@
+//Zad1
+/*int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+        if ((a+b)%2 == 0)
+          Console.WriteLine("Tak");
+        else
+          Console.WriteLine("Nie");
+*/
+//Zad2
+/*int c = int.Parse(Console.ReadLine());
+int g = int.Parse(Console.ReadLine());
+        if ((c * g) / 2 > Math.Sqrt(c * g))
+          Console.WriteLine("Tak");
+        else
+          Console.WriteLine("Nie");
+*/
+//Zad3
+/*int k = int.Parse(Console.ReadLine());
+int l = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
+if (k == l && l == m && k == m)
+    Console.WriteLine();
+if (k == l)
+    Console.WriteLine("Tak, równe są dwie pierwsze liczby");
+if (l == m)
+    Console.WriteLine("Tak, równe są dwie ostatnie liczby");
+if (k == m)
+    Console.WriteLine("Tak, równe są liczba pierwsza i liczba trzecia");
+if (k != l && l != m && k != m)
+    Console.WriteLine("Nie ma równych liczb");
+*/
+//Zad4
+/*int z = int.Parse(Console.ReadLine());
+int y = int.Parse(Console.ReadLine());
+int x = int.Parse(Console.ReadLine());
+int w = int.Parse(Console.ReadLine());
+if (z < y && z < x && z < w)
+    Console.WriteLine("Najmniejsza jest liczba: " + z);
+else if (y < z && y < x && y < w)
+    Console.WriteLine("Najmniejsza jest liczba: " + y);
+else if (x < z && x < y && x < w)
+    Console.WriteLine("Najmniejsza jest liczba: " + x);
+else if (w < z && w < x && w < y)
+    Console.WriteLine("Najmniejsza jest liczba: " + w);
+*/
+//Zad5
+/*int m = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+int o = int.Parse(Console.ReadLine());
+if (m + n > o & m + o > n & n + o > m)
+    Console.WriteLine("Tak");
+else
+    Console.WriteLine("Nie");
+*/
+//Zad6
+/*
+int s = int.Parse(Console.ReadLine());
+int r = int.Parse(Console.ReadLine());
+int p = int.Parse(Console.ReadLine());
+if ((s + r > p) & (s + p > r) & (r + p > s))
+    if ((s * s + r * r == p * p) || (s * s + p * p == r * r) || (p * p + r * r == s * s))
+        Console.WriteLine("Trójkąt prostokątny");
+    else
+        if ((s * s + r * r < p * p) || (s * s + p * p < r * r) || (p * p + r * r < s * s))
+        Console.WriteLine("Trójkąt rozwartokątny");
+    else
+        Console.WriteLine("Trójkąt ostrokątny");
+else
+    Console.WriteLine("Nie da się zbudować trójkąta");
+*/
