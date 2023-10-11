@@ -1,0 +1,40 @@
+//Horner:
+//int p = int.Parse(Console.ReadLine()); //podstawa programu
+//string a = Console.ReadLine(); //liczba
+//int w = 0;
+
+//w = (int)a[0] - 48;
+
+//for (int i = 1; i < a.Length; i++)
+//{
+//    w = p * w + (a[i] - 48);   
+//}
+//Console.WriteLine(w); 
+//w = (int)char.GetNumericValue(a[0]); //\double i to samo co "w = (int)a[0] - 48;" i "w = Convert.ToInt32(Convert.ToString(a[0]));"
+
+//Konwersja BIN -> DEC i odwrotnie:
+//1.z BIN na DEC:
+//string a = Console.ReadLine();
+//int w = 0;
+//for  (int i = a.Length - 1; i >= 0; i--)
+//{
+//    w = w + (a[i] - 48) * (int) Math.Pow(2, a.Length - i - 1);
+//}
+//Console.WriteLine(w);   
+//2.z DEC na BIN:
+//int p = int.Parse(Console.ReadLine());
+//string w = "";
+//while (p > 0)
+//{
+//    w = p % 2 + w;
+//    p = p / 2;
+//}
+//Console.WriteLine(w);
+//Wersja 2:
+//void d2b(int p)
+//{
+//    if (p == 0) return;
+//    d2b(p / 2);
+//    Console.WriteLine(p % 2);
+//}
+//d2b(11);
