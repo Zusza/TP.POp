@@ -1,7 +1,12 @@
-Scrum to najpopularniejszy sposób nowoczesnego, elastycznego zarządzania pracą zespołową. Jest używany nie tylko przy tworzeniu oprogramowania. Coraz częściej wykorzystują go również zespoły z branż tak odległych od siebie jak finanse i marketing, HR i branże kreatywne. Jego wciąż rosnąca popularność sprawia, że Scrum to w tej chwili najbardziej sprawdzone ramy organizacyjne, z których korzystają zespoły dążące do maksymalnej efektywności.
-Scrum z założenia jest prosty. Po pierwsze, pozwala rozłożyć trudne problemy na mniejsze, bardziej zrozumiałe składowe. Po drugie, pozwala podzielić pracę na etapy, które mogą zostać w pełni wykonane w krótkim czasie przynosząc wymierny i satysfakcjonujący efekt. Po trzecie, pozwala zaplanować kolejne etapy pracy korzystając z uzyskanych rezultatów i wniosków wyciągniętych z procesu realizacji.
+Scrum to najpopularniejszy sposób nowoczesnego, elastycznego zarządzania pracą zespołową. Jest używany nie tylko przy tworzeniu oprogramowania. Coraz częściej wykorzystują go również 
+zespoły z branż tak odległych od siebie jak finanse i marketing, HR i branże kreatywne. Jego wciąż rosnąca popularność sprawia, że Scrum to w tej chwili najbardziej sprawdzone ramy 
+organizacyjne, z których korzystają zespoły dążące do maksymalnej efektywności.
+Scrum z założenia jest prosty. Po pierwsze, pozwala rozłożyć trudne problemy na mniejsze, bardziej zrozumiałe składowe. Po drugie, pozwala podzielić pracę na etapy, które mogą zostać 
+w pełni wykonane w krótkim czasie przynosząc wymierny i satysfakcjonujący efekt. Po trzecie, pozwala zaplanować kolejne etapy pracy korzystając z uzyskanych rezultatów i wniosków 
+wyciągniętych z procesu realizacji.
+
 Podstawy Scrum:
-1.	Scrum - sposób pracy Scrum Team, w którym tworzenie produktu podzielone jest na krótkie iteracje - Sprinty. Jego celem jest szybkie i elastyczne dostarczanie wartościowych rozwiązań
+1.	Scrum - sposób pracy Scrum Team, w którym tworzenie produktu podzielone jest na krótkie iteracje - Sprinty. Jego celem jest szybkie i elastyczne dostarczanie wartościowych rozwiązań.
 2.	Wartości Scrum - 5 wartości leżących u podstaw Scrum to: zaangażowanie w pracę, skupienie na celu, otwartość na zmiany, szacunek oraz odwaga w rozwiązywaniu problemów.
 3.	Empiryzm - ograniczanie planowania i założeń do minimum na rzecz oparcia się na doświadczeniu, obserwacji i eksperymentowaniu.
 4.	Samozarządzanie - cecha Scrum Team, która oznacza, że jego członkowie samodzielnie podejmują decyzję o tym, kto z nich będzie wykonywał określone zadania, kiedy i jak.
@@ -12,14 +17,17 @@ Role w Scrum:
 2.	Scrum Master - coach i lider Zespołu Developerskiego. Osoba odpowiedzialna za właściwe rozumienie Scrum i działanie według jego zasad.
 3.	Developer - każdy członek Zespołu Developerskiego, niezależnie od specjalizacji zawodowej. Osoba odpowiedzialna za współtworzenie użytecznego Przyrostu w każdym Sprincie.
 4.	Zespół Developerski - interdyscyplinarna grupa składająca się ze wszystkich Developerów zaangażowanych w tworzenie Produktu.
-5.	Interesariusz - osoba nienależąca do Scrum Team, w której interesie leży stworzenie jak najlepszego Produktu. W ramach Scrum Team reprezentowany przez Product Ownera. Bierze udział w Sprint Review.
+5.	Interesariusz - osoba nienależąca do Scrum Team, w której interesie leży stworzenie jak najlepszego Produktu. W ramach Scrum Team reprezentowany przez Product Ownera. Bierze udział 
+w Sprint Review.
 
 Artefakty Scrum i ich składowe:
-1.	Artefakty - Backlog Produktu, Backlog Sprintu, Przyrost i ich składowe. Stanowią odzwierciedlenie aktualnego stanu pracy nad Produktem w odniesieniu do Celu Produktu, Celu Sprintu i Definicji Ukończenia
+1.	Artefakty - Backlog Produktu, Backlog Sprintu, Przyrost i ich składowe. Stanowią odzwierciedlenie aktualnego stanu pracy nad Produktem w odniesieniu do Celu Produktu, Celu Sprintu i 
+Definicji Ukończenia
 2.	Backlog Produktu (Product Backlog) - uporządkowana lista prac potrzebnych do stworzenia określonego Produktu, czyli realizacji Celu Produktu. Jest zarządzany przez Product Ownera.
 3.	Backlog Sprintu (Sprint Backlog) - uporządkowana lista prac potrzebnych do realizacji funkcjonalności Produktu zdefiniowanej przez Cel Sprintu. Jest zarządzany przez Zespół Developerów.
 4.	Przyrost (Increment) - kompletna i wartościowa praca wykonana przez Developerów w jednym Sprincie. Suma wszystkich Przyrostów tworzy Produkt.
-5.	Definicja Ukończenia (Definition of Done) - zamieszczony w Backlogu Produktu jasny i przejrzysty opis oczekiwanego stanu Produktu po ukończeniu Przyrostu. Opisuje pracę, jaka została wykonana w ramach Przyrostu.
+5.	Definicja Ukończenia (Definition of Done) - zamieszczony w Backlogu Produktu jasny i przejrzysty opis oczekiwanego stanu Produktu po ukończeniu Przyrostu. Opisuje pracę, jaka 
+została wykonana w ramach Przyrostu.
 6.	User Story - opis cząstkowej funkcjonalności Produktu z punktu widzenia Klienta. Przyjmuje formę schematu „Jako [typ użytkownika] chcę [co robić?], ponieważ [po co? dlaczego?]”.
 
 Wydarzenia Scrum i ich składowe
@@ -33,4 +41,3 @@ Wydarzenia Scrum i ich składowe
 8.	Cel Sprintu - praca do wykonania w ramach jednego Sprintu wyrażona w formie celu biznesowego. Zapewnia spójność pracy Zespołu Developerów.
 9.	Wykres Spalania (Burndown Chart) - pokazuje ilość pracy zaplanowanej w Backlogu Sprintu lub Produktu w odniesieniu do czasu, jaki pozostał na jej wykonanie.
 10.	Prędkość Zespołu (Velocity) - wskaźnik pozwalający określić jaka część Backlogu Produktu stała się Przyrostem w trakcie jednego Sprintu.
-
