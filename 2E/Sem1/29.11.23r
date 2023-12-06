@@ -153,11 +153,82 @@
 // Zad.5 - Inne ciągi kosmiczne - rakieta USA
 
 // 1  3  4   8  15   27
+//int r7a(int i)
+//{
+//    if (i == 1) return 1;
+//    if (i == 2) return 3;
+//    if (i == 3) return 4;
+//    return r7a(i - 1) + r7a(i - 2) + r7a(i - 3); 
+//}
 
 // 4    5    -3    2   14   22    48   
 
 // 1    1    1    3   5   9   
 
 // 2   3    4     -1    -8    -11   -2  
+//int r7d(int i)
+//{
+//    if (i == 1) return 2;
+//    if (i == 2) return 3;
+//    if (i == 3) return 4;
+//    return r7d(i - 1) - r7d(i - 2) - r7d(i - 3);
+//}
 
 // 1   4    3    16     5     64     7    256   9   1024  
+//int r7e(int i)
+//{
+//    if (i == 1) return 1;
+//    if (i == 2) return 4;
+//    if (i % 2 == 0) return r7e(i - 2) * 4;
+//    else return i; //albo r7e(n-2)+2;
+//}
+
+//Zad.6 - Wyznacz sumę cyfr wpisanej przez usera liczby (iter + reku)
+//iter:
+//int n = int.Parse(Console.ReadLine());
+//int sum = 0;
+//while (n > 0)
+//{
+//    sum += n % 10;
+//    n = n / 10;
+//}
+//Console.WriteLine(sum);
+//v2:
+//int suma(int i)
+//{
+//    int sum = 0;
+//    while (i > 0)
+//    {
+//        sum += n % 10;
+//        n = n / 10;
+//    }
+//    return sum;
+//}
+//reku:
+//int suma(int i)
+//{
+//    if (i == 0) return 0;
+//    return suma(i / 10) + i % 10;
+//}
+
+//Zad.7 - Zamiana dec na bin (iter + reku)
+//iter:
+//string bin(int i)
+//{
+//    string w = "";
+//    while (i > 0)
+//    {
+//        w = i % 2 + w;
+//        i = i / 2;
+//    }
+//    return w;
+//}
+//Console.WriteLine(bin(11));
+//reku:
+//void bin(int i)
+//{
+//    if (i == 0) return;
+//    bin(i / 2);
+//    Console.Write(i%2);
+//}
+//bin(11);
