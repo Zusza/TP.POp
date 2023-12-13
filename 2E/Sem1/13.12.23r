@@ -1,0 +1,95 @@
+////Zad.1 - Zapisz iteracyjnie i rekurencyjnie obliczanie sumy kodów ASCII wpisanego przez usera słowa.
+////Rekurencyjnie:
+////string a = "Arthur Morgan";
+////Console.WriteLine(a.Substring(1)); //Wywala 1 litere napisu
+//int r1(string n)
+//{
+//    if(n == "") return 0;
+//    return r1(n.Substring(1)) + (int)n[0];
+//}
+//Console.WriteLine(r1("Arthur Morgan"));
+
+////Zad.2 - Napisz iteracyjnie i rekurencyjnie obliczenie x^n (x do potęgi n).
+////Iteracyjnie:
+//Console.WriteLine("Podaj x: ");
+//int x = int.Parse(Console.ReadLine());
+//Console.WriteLine("Podaj n: ");
+//int n = int.Parse(Console.ReadLine());
+//Console.WriteLine("Wynik: ");
+//int w = 1;
+//for (int i = 0; i < n; i++)
+//{
+//    w = w * x;
+//}
+//Console.WriteLine(w);
+
+////Rekurencyjnie:
+//Console.WriteLine("Podaj x: ");
+//int x = int.Parse(Console.ReadLine());
+//Console.WriteLine("Podaj x: ");
+//int n = int.Parse(Console.ReadLine());
+//Console.WriteLine("Wynik: ");
+//Console.WriteLine(r2(x, n));
+//int r2(int x, int n)
+//{
+//    if (n == 0) return 1;
+//    return r2(x, n - 1) * x;
+//}
+
+////Zad.3 - Napisz algorytmy NWD modulo i odejmowanie w wersji rekurencyjnej. 
+////Przypomnienie NWD odejmowanie:
+//int eo(int a, int b)
+//{
+//    while (a != b)
+//    {
+//        if (a < b)
+//        {
+//            a -= b;
+//        }
+//        if (b < a)
+//        {
+//            b -= a;
+//        }
+//    }
+//    return a;
+//}
+////Rekurencyjnie odejmowanie:
+//Console.WriteLine("Podaj x: ");
+//int x = int.Parse(Console.ReadLine());
+//Console.WriteLine("Podaj x: ");
+//int n = int.Parse(Console.ReadLine());
+//Console.WriteLine("Wynik: ");
+//r3(x, n);
+//void r3(int x, int y)
+//{
+//    if (x == y)
+//    {
+//        Console.WriteLine(x);
+//        return;
+//    }
+//    if(x > y)
+//    {
+//        r3(x - y, y);
+//    }
+//    else
+//    {
+//        r3(x, y - x);
+//    }
+//}
+////Rekurencyjnie modulo:
+//void r3(int x, int y)
+//{
+//    if (x == y)
+//    {
+//        Console.WriteLine(x);
+//        return;
+//    }
+//    if (x > y)
+//    {
+//        r3(x % y, y);
+//    }
+//    else
+//    {
+//        r3(x, y % x);
+//    }
+//}
