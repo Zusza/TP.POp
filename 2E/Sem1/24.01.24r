@@ -1,0 +1,7 @@
+1.Graf spójny - graf, w którym każdą parę wierzchołków łączy pewna ścieżka. Graf nieposiadający powyższej własności to graf niespójny.
+2.Graf nieskierowany - zbiór wierzchołków i krawędzi, wierzchołki należące do krawędzi są po prostu jej końcami.
+3.Cykl grafu – zamknięta droga prosta.
+4.Stopień wierzchołka - liczba krawędzi grafu incydentnych do wierzchołka. Jest on równy sumie liczb wszystkich łuków wchodzących, wychodzących, krawędzi i pętli.
+5.Graf eulerowski - każdą krawędź odwiedza się 1 raz
+6.Graf hamiltonowski - każdy wierzchołek odwiedza się 1 raz
+7.Graf typu drzewo - droga z jednego wierzchołka do drugiego jest tylko jedna
