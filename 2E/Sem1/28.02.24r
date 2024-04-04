@@ -1,0 +1,115 @@
+//Zad.1 - Stwórz tablice 115 pierwszych liczb, które w reprezentacji binarnej kończą się na 11, 111,
+//1011, 1111..
+//int[] T = new int[115];
+//T[0] = 3;
+//for (int i = 1; i < T.Length; i++)
+//{
+//    T[i] = T[i - 1] + 4;
+//}
+
+//foreach (int i in T)
+//{
+//    Console.Write(i + " | ");
+//}
+
+//Zad.2 - Stwórz plik o nazwie "osoby" z zawartością 5 osób: imię, nazwisko, wiek i wstawcie do tablicy
+//obiekty (struktury) typu osoba z właściwościami/polami z pliku (imie, nazwisko..)
+//StreamReader sr = new StreamReader(@"..\..\..\osoby.txt"); //Dodawanie pliku z którego program ma wyświetlić dane
+
+//Osoba[] Osoby = new Osoba[5];
+//int licznik = 0;
+//string[] linia = new string[3];
+//while (!sr.EndOfStream) //Czytanie pliku
+//{
+//    linia = sr.ReadLine().Split(";");
+//    Osoba os;
+//    os.imie = linia[0];
+//    os.nazwisko = linia[1];
+//    os.wiek = int.Parse(linia[2]);
+//    Osoby[licznik++] = os;
+//}
+//sr.Close(); //Zamykanie pliku
+
+//foreach (var item in Osoby)
+//{
+//    Console.Write(item.imie + " | " + item.nazwisko + " | " + item.wiek + "\n");
+//}
+
+//struct Osoba //Strukture wsadzamy POD kodem
+//{
+//    public string imie;
+//    public string nazwisko;
+//    public int wiek;
+//}
+
+//Zad.3 - Stwórz liste 6 losowych słów składających się z 3 różnych samogłosek (List, ArrayList)
+//List<char> LS = new List<char> {'a', 'ą', 'e', 'ę', 'i', 'o', 'u', 'y' };
+//List<string> S = new List<string>();
+//List<char> LSC = new List<char>();
+
+//Random r = new Random();
+//string slowo;
+//int numer;
+//for (int i = 0; i < 6; i++)
+//{
+//    LSC = LS.ToList();
+//    slowo = "";
+//    for (int j = 0; j < 3; j++)
+//    {
+//        numer = r.Next(0, LSC.Count);
+//        slowo = slowo + LSC[numer];
+//        LSC.RemoveAt(numer);
+//    }
+//    S.Add(slowo);
+//}
+
+//foreach (var item in S)
+//{
+//    Console.Write(item + "\n");
+//}
+
+//Zad.4 - Stwórz kolejke (queue) 4 losowych liczb fibonacciego < 100 (mogą się powtarzać). Wyświetl kolejke,
+//usuń z niej 2 elementy i wyświetl pozostałe 2
+using System.Collections;
+int fibo(int n)
+{
+    if (n==1) return 1;
+    if (n==2) return 2;
+    return fibo(n - 1) + fibo(n - 2);
+}
+
+ArrayList FIBO = new ArrayList();
+
+int i = 1;
+while (fibo(i) < 100)
+{
+    FIBO.Add(fibo(i));
+    i++;
+}
+
+foreach (var item in FIBO)
+{
+    Console.WriteLine(item);
+}
+
+Random r = new Random();
+Queue q = new Queue();
+
+for (int j = 0; j < 4; i++)
+{
+    q.Enqueue(FIBO[r.Next(0, FIBO.Count)]);
+}
+
+foreach (var item in q)
+{
+    Console.Write(item + " ");
+}
+Console.WriteLine("\n");
+q.Dequeue();
+q.Dequeue();
+foreach (var item in q)
+{
+    Console.Write(item + " ");
+}
+
+//Zad.5 - Stwórz stos (stack) 5 kolejnych dwucyfrowych liczb pierwszych. Wyświetl stos, usuń 3 wyrazy i znów wyświetl stos
