@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _3._04._24r_2
+{
+    //Zad.1 - Napisz kod na podstawie zdjęcia "Composite_UML"
+
+    //public abstract class Component
+    //{
+    //    public abstract void operation();
+    //}
+    //public class Leaf : Component
+    //{
+    //    public override void operation() { } 
+    //}
+    //public class Composite : Component
+    //{
+    //    public List<Component> components = new List<Component>();
+    //    public override void operation() { }
+    //    public void add() { }
+    //    public void remove() { }
+    //    public void getChild() { }
+    //}
+
+    //Zad.2 - Przykład z życia... Zakoduj Osoby w firmie. Jest Prezes, 
+    //        który ma pod sobą Dyrektora Finansów i Dyrektora Logistyki.
+    //        W finansach pracuje księgowa, a w logistyce spedytor, magazynier i kierowca.
+    //        Stwórz program na bazie kompozytu.
+    //        (proponuję ustawić kole stanowisko i definiować je jednak w konstruktorze dla wygody)
+
+    public abstract class DyrektorLogistyki { }
+    public class Spedytor : DyrektorLogistyki { }
+    public class Magazynier : DyrektorLogistyki { }
+    public class Kierowca : DyrektorLogistyki { }
+
+    public abstract class DyrektorFinansow { }
+    public class Ksiegowa : DyrektorFinansow { }
+
+    public class Prezes
+    {
+        
+    }
+    //public class DyrektorFinansow : Prezes 
+    //{
+    //    public void ksiegowa() { }
+    //}
+    //class DyrektorLogistyki : Prezes 
+    //{
+    //    public void spedytor() { }
+    //    public void magazynier() { }
+    //    public void kurier() { }
+    //}
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
