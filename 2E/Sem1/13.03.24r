@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _13._03._24r
+{
+    class Przyklad
+    {
+        //Pola (Public, Private, Protected, Internal) - np. private int wiek;/public string imie;
+        private int wzrost;
+        private int age;
+        //Właściwości
+        public void met1() { }
+        public int getAge(int age)
+        {
+            return age;
+        }
+        public void setAge(int aage)
+        {
+            age = aage;
+        }
+        //Metody
+        public int Wzrost
+        {
+            get
+            {
+                return wzrost + 100;
+            }
+            set
+            {
+                wzrost = value;
+            }
+        }
+        class KoloZapas { }
+        class Auto
+        {
+            KoloZapas kolo;
+            public void setKolo(KoloZapas kolo)
+            {
+                this.kolo = kolo;
+            }
+        }
+
+        class Nauczyciel { }
+
+        class Szkola
+        {
+            Nauczyciel nau;
+            void PrzyjmijNauDoPracy(Nauczyciel n)
+            {
+                nau = n;
+            }
+        }
+        //Ćw.1
+        class Klient { }
+        class Produkt { }
+        class Dostawa { }
+        class Zamowienia
+        {
+            Klient k;
+            Produkt p;
+            Dostawa d;
+
+            public void setKlient(Klient K)
+            {
+                this.k = K;
+            }
+            public void setProdukt(Produkt P)
+            {
+                this.p = P;
+            }
+            public void PrzypiszDostawa(Dostawa D)
+            {
+                this.d = D;
+            }
+        }
+
+        interface IKomfort
+        {
+            void wlaczKlime();
+        }
+        class Samochód : IKomfort
+        {
+            public void wlaczKlime()
+            {
+                Console.WriteLine("Chłodzę Cię");
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Arthur Morgan");
+            //Klasy i fasady
+            //Kompozycja:
+            //- ścisłe połączenie np. człowiek (John) - powietrze (Wilki)
+            //- podłączenie obiektu w konstruktorze
+            //Agregacja:
+            //- pożądane połączenie np. auto (Arthur) - koło zapasowe (Kapelusz)
+            //- podłączenie w set
+            //Asocjacja:
+            //- dowolne/swobodne połączenie (bez połączenia oba przeżyją) np. pracownik (Dutch) - praca (Dobry plan)
+
+        }
+    }
+}
