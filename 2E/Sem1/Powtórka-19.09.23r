@@ -1,0 +1,240 @@
+//------------------------------Zadania-13.09.23r------------------------------------
+
+///1. User podaje NWD i NWW dwóch liczb. Napisz program, który znajdzie te liczby. a*b = nww(a,b) * nwd(a,b)
+int NWD(int a, int b)
+{
+    while (a != b)
+    {
+        if (a > b) a -= b;
+        if (b > a) b -= a;
+    }
+    return a;
+}
+
+int NWW(int a, int b)
+{
+    return a * b / NWD(a, b);
+}
+
+//int x = int.Parse(Console.ReadLine());
+//int y = int.Parse(Console.ReadLine());
+
+//Metoda #1 - Brute Force
+//for (int i = 1; i < 1000; i++)
+//{
+//    for (int j = 1; j < 1000; j++)
+//    {
+//        if (NWD(i, j) == x && NWW(i, j) == y)
+//        {
+//            Console.WriteLine(i + " " + j);
+//        }
+//    }
+//}
+
+///Metoda #2 - iloczyn nwd*nww
+//int iloczyn = x * y;
+//for (int i = 1; i <= iloczyn; i++)
+//{
+//    if (iloczyn % i == 0 && NWD(i,iloczyn/i) == x && NWW(i, iloczyn/i) == y)
+//    {
+//        Console.WriteLine(i + " " + iloczyn/i);
+//    }
+//}
+
+///2. Sprawdź czy suma dwóch ułamków podanych przez usera jest ułamkiem niewłaściwym.
+//string pier = Console.ReadLine();
+//string drug = Console.ReadLine();
+//string[] P = pier.Split("/");
+//string[] D = drug.Split("/");
+//int a = int.Parse(P[0]);
+//int b = int.Parse(P[1]);
+//int c = int.Parse(D[0]);
+//int d = int.Parse(D[1]);
+
+//int mianownik = NWW(b, d);
+//int licz1 = mianownik * a / b;
+//int licz2 = mianownik * c / d;
+
+//if (licz1 + licz2 > mianownik)
+//{
+//    Console.WriteLine("TAK");
+//}
+//else
+//{
+//    Console.WriteLine("NIE");
+//}
+
+///3. Sprawdź czy wieksza jest suma dwóch wpisanych przez usera ułamków czy suma ich odwrotności. COŚ NIE DZIAŁA CHYBA SPRAWDŹ!!!!
+//string pier = Console.ReadLine();
+//string drug = Console.ReadLine();
+//string[] P = pier.Split("/");
+//string[] D = drug.Split("/");
+//int a = int.Parse(P[0]);
+//int b = int.Parse(P[1]);
+//int c = int.Parse(D[0]);
+//int d = int.Parse(D[1]);
+//int e = b;
+//int f = a;
+//int g = d;
+//int h = c;
+
+//int mian1 = NWW(b, d);
+//int licz1 = mian1 * a / b;
+//int licz2 = mian1 * c / d;
+//int licznik = licz1 + licz2;
+//int sum1 = licznik / mian1;
+
+//int mian2 = NWW(f, h);
+//int licz3 = mian2 * e / f;
+//int licz4 = mian2 * g / h;
+//int licznik2 = licz3 + licz4;
+//int sum2 = licznik2 / mian2;
+
+//if (sum1 > sum2)
+//{
+//    Console.WriteLine("Suma jest większa");
+//}
+//else
+//{
+//    Console.WriteLine("Suma odwrotności jest większa");
+//}
+
+///4. Sprawdź czy w danym napisie więcej jest spółgłosek czy samogłosek.
+//char[] SAMOGLOSKI = { 'a', 'e', 'i', 'o', 'u', 'y' };
+//string napis = Console.ReadLine();
+//int ilosc = 0;
+
+//for (int i = 0; i < napis.Length; i++)
+//{
+//    if (SAMOGLOSKI.Contains(napis[i]))
+//    {
+//        ilosc++;
+//    }
+//    else
+//    {
+//        --ilosc;
+//    }
+//}
+//if (ilosc > 0)
+//{
+//    Console.WriteLine("Więcej jest samogłosek");
+//}
+//else
+//{
+//    Console.WriteLine("Więcej jest spółgłosek");
+//}
+
+///5. Podaj której literki jest najwięcej w podanym napisie i jaka to jest literka.
+//string n = Console.ReadLine();
+//int[] T = new int[300];
+//int maks = 0;
+//char najl = ' ';
+
+//foreach (char l in n)
+//{
+//    int k = (int)l;
+//    T[k] += 1;
+
+//    if (T[k] > maks)
+//    {
+//        maks = T[k];
+//        najl = l;
+//    }
+//}
+
+//if (najl != ' ')
+//{
+//    Console.WriteLine($"Najczęściej występującą literą jest: {najl}");
+//}
+
+///6. Znajdź trzy takie liczby, których suma, a także suma każdej pary tych liczb jest kwadratem innej liczby.
+
+
+///7. Dwie wieżyce, jedna wysokości 30 stóp, druga 40 stóp, oddalone są od siebie o 50 stóp. 
+///Pomiędzy nimi znajduje się wodotrysk, do którego zlatują dwa ptaki z wierzchołków obu wieżyc 
+///i lecąc z jednakową prędkością przybywają w tym samym czasie. 
+///Napisz program, który obliczy, która jest dłuższa odległość pozioma wodotrysku od jednej z wieżyc?
+//int w1 = 30; //900
+//int w2 = 40; //1600
+//int odl = 50; //2500
+//double x = ObliczX();
+//Console.WriteLine("Wartość x wynosi: " + x);
+//static double ObliczX()
+//{
+//    // Dane z równania
+//    double w1 = 30 * 30;
+//    double w2 = 40 * 40;
+//    double odl = 50;
+
+//    // Obliczenia
+//    double x = Math.Sqrt(w2 + odl * odl - w1);
+
+//    return x;
+//}
+//double y = 50 - x;
+//if (x > y)
+//{
+//    Console.WriteLine("Wieżyca o wysokości 30 ma dłuższą odległość");
+//}
+//else
+//{
+//    Console.WriteLine("Nie działa xd");
+//}
+
+///8. Brajanek z Dżesiką grają w siedem. Gra polega na tym, że jeden z graczy podaje granice przedziału <a, b> 
+///a drugi z nich musi szybko odpowiedzieć, ile w tym przedziale jest liczb, 
+///które są podzielne przez siedem, albo suma ich cyfr jest podzielna przez siedem (lub jedno i drugie). 
+///Napisz program, który pomaga w takich obliczeniach.
+//int Suma(int x)
+//{
+//    int suma = 0;
+//    while (x != 0)
+//    {
+//        suma = suma + (x % 10);
+//        x = x / 10;
+//    }
+//    return suma;
+//}
+//int p = int.Parse(Console.ReadLine());
+//int k = int.Parse(Console.ReadLine());
+//int ilosc = 0;
+//for (int i = p; i <= k; i++)
+//{
+//    if (i % 7 == 0 || Suma(i) % 7 == 0)
+//    {
+//        ilosc = ilosc + 1;
+//    }
+//}
+//Console.WriteLine(ilosc);
+
+///9. Halinka wspina się na schody w centrum handlowym. Za każdym razem, gdy dziewczynka wspina się na nowe schody, 
+///zaczyna liczyć na głos po kolei od 1 do ilości stopni. Na przykład, 
+///jeśli wspina się na dwa zestawy schodów – jeden z 3 stopniami, a drugi z 4 stopniami – 
+///będzie liczyć tak: 1, 2, 3, 1, 2, 3, 4. Masz dane wszystkie liczby, które Halinka wypowiedziała 
+///podczas całej swojej wycieczki po centrum i Twoim zadaniem jest obliczenie, ile zestawów schodów „zaliczyła”.
+
+///10. Brajanek wybrał się na spacer do parku. Przysiadł na chwilę na parkowej ławce i obserwował przechadzających się ludzi.
+///W parku znajduje się n ławek ponumerowanych od 1 do n. Kiedy Brajanek zaczął swoje obserwacje, na i-tej ławce siedziało ai osób. 
+///Do parku przybyło właśnie m osób i każda chciałaby znaleźć sobie miejsce na ławce.
+///Niech k oznacza największą liczbę osób siedzących na jednej ławce (po przyjściu tych dodatkowych m osób). 
+///Jaka jest minimalna, a jaka maksymalna wartość k?
+//int lawki = 3;
+//int a = int.Parse(Console.ReadLine()); //ile osob siedzi na 1 ławce
+//int b = int.Parse(Console.ReadLine()); //ile osob siedzi na 2 ławce
+//int c = int.Parse(Console.ReadLine()); //ile osob siedzi na 3 ławce
+//int m = int.Parse(Console.ReadLine());
+//int max1 = 0, k;
+
+//if (a > b && a > c) max1 = a;
+//if (b > a && b > c) max1 = b;
+//if (c > a && c > b) max1 = c;
+//k = max1 + m;
+//Console.WriteLine("Max wartość k = " + k);
+
+//int min1 = 0, k2; //-> nie działa
+
+//if (a < b && a < c) min1 = a;
+//if (b < a && b < c) min1 = b;
+//if (c < a && c < b) min1 = c;
+//k2 = min1 + m;
+//Console.WriteLine("Min wartość k = " + k2);
