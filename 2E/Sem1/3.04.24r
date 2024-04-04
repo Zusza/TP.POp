@@ -1,0 +1,86 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _3._04._24r
+{
+    //Stwórz fasadę salonu urody, który będzie się składał z:
+    //- lokalu(obiekt z adresem, numerem telefonu oraz stawką czynszu)
+    //- osób zatrudnionych(Lista obiektów typu Kosmetyczka, Fryzjerka oraz Manikjurzystka
+    //  (łącznie 4 osoby ze wszystkich stanowisk)
+    //- wyposażenie salonu(Lista sprzętów i lista materiałów eksploatycyjnch np szampony, grzebienie itp)
+
+    //4 poziomy dostępu(dziedziczenie i obiekt):
+    //- public - dostęp z klasy jak i z obiektu
+    //- protected - dostęp z klasy, ala nie ma z obiektu
+    //- private - nie ma dostępu z klasy i nie ma z obiektu
+    //- internal - nie ma dostepu z klasy ale jest z obiektu
+    abstract class Pracownik { }
+    class Kosmetyczka : Pracownik { }
+    class Fryzjerka : Pracownik { }
+    class Manikiurzystka : Pracownik { }
+
+    class Lokal
+    {
+        public string Adres { get; set; }
+        public string NumerTelefonu { get; set; }
+        public double StawkaCzynszu { get; set; }
+    }
+
+    class Wyposażenie
+    {
+        public string Nazwa { get; set; }
+    }
+
+    class SalonUrody
+    {
+        Lokal Lokal;
+        List<Pracownik> ListaPracowników = new List<Pracownik>();
+        List<Wyposażenie> Wyposażenie = new List<Wyposażenie>();
+        public void setLokal(Lokal lokal)
+        {
+            Lokal = lokal;
+        }
+        public void DodajPracownika(Pracownik pracownik)
+        {
+            ListaPracowników.Add(pracownik);
+        }
+        public void DodajWyposażenie(Wyposażenie wyposażenie)
+        {
+            Wyposażenie.Add(wyposażenie);
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Kosmetyczka k1 = new Kosmetyczka();
+            Kosmetyczka k2 = new Kosmetyczka();
+            Fryzjerka f1 = new Fryzjerka();
+            Manikiurzystka m1 = new Manikiurzystka();
+
+            Lokal l = new Lokal();
+            l.Adres = "Blackwater";
+            l.NumerTelefonu = "360026660";
+            l.StawkaCzynszu = 123.45;
+
+            Wyposażenie sz1 = new Wyposażenie();
+            sz1.Nazwa = "HeadShampoo";
+            Wyposażenie g1 = new Wyposażenie();
+            g1.Nazwa = "Grzebień cieńkościenny";
+
+            SalonUrody salon = new SalonUrody();
+            salon.setLokal(l);
+            salon.DodajPracownika(k1);
+            salon.DodajPracownika(k2);
+            salon.DodajPracownika(f1);
+            salon.DodajPracownika(m1);
+            salon.DodajWyposażenie(sz1);
+            salon.DodajWyposażenie(g1);
+        }
+    }
+}
