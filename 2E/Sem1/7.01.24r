@@ -1,0 +1,41 @@
+////Rekurencyjnie odejmowanie:
+Console.WriteLine("Podaj a: ");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Podaj b: ");
+int b = int.Parse(Console.ReadLine());
+Console.WriteLine("Wynik: ");
+Console.WriteLine(eo);
+//r3(x, n);
+//void r3(int x, int y)
+//{
+//    if (x == y)
+//    {
+//        Console.WriteLine(x);
+//        return;
+//    }
+//    if (x > y)
+//    {
+//        r3(x - y, y);
+//    }
+//    else
+//    {
+//        r3(x, y - x);
+//    }
+//}
+
+int eo(int a, int b)
+{
+    int ilo = a * b;
+    while (a != b)
+    {
+        if (a > b)
+        {
+            a -= b;
+        }
+        if (b > a)
+        {
+            b -= a;
+        }
+    }
+    return a;
+}
