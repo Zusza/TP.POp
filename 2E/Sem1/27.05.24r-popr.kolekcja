@@ -11,14 +11,14 @@ namespace Zuza.Jerzynska._2E.popr.kolekcje._27._05._24r
 		static void Main(string[] args)
 		{
 			//Zad.2
-			List<int> list = new List<int>();
+			//List<int> list = new List<int>();
 			for (int i = 10; i <= 20; i++)
 			{
 				for (int j = 1; j <= 20; j++)
 				{
 					if (i % j == 0)
 					{
-						list.Add(j);
+						//list.Add(j);
 						Console.WriteLine($"{i} - {j}");
 					}
 				}
@@ -26,10 +26,6 @@ namespace Zuza.Jerzynska._2E.popr.kolekcje._27._05._24r
 
 			}
 
-			//for(int i = 10; i <= 20; i++)
-			//{
-
-			//}
 			//Zad.1
 			//int n = int.Parse(Console.ReadLine());
 			//int[] T = new int[n];
