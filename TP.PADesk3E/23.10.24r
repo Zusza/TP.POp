@@ -1,0 +1,31 @@
+namespace _23._10._24r
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double reszta;
+            double a = double.Parse(textBox1.Text);
+            int i = 0;
+            double[] nominaly = { 200, 100, 50, 20, 10, 5, 2, 1 };
+
+            while (a > 0)
+            {
+                if (a >= nominaly[i])
+                {
+                    double ln = a / nominaly[i];
+                    a = Math.Round(a - nominaly[i] * ln, 2);
+
+                    MessageBox.Show("Wypłacono: " + ln + " x " + nominaly[i] + " PLN");
+                }
+            }
+        }
+    }
+}
+
+Popr to
