@@ -1,0 +1,5 @@
+Zad.1 - Napisz aplikacje w której użytkownik poda liczbę a program wyda resztę w nominałach 1, 2, 5, 10, 20, 50, 100.
+Nominały mają być wyświetlone jako zdjęcia tych nominałów.
+
+Zad.2 - Napisz aplikacje w której użytkownik poda datę urodzenia a program zsumuje cyfry i pokaże czy liczba jest sigmą.
+Liczba która jest sigmą to liczba która składa się z dwóch takich samych cyfr np. 11, 22, 33, itd.
