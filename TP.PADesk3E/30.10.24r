@@ -1,5 +1,61 @@
 Zad.1 - Napisz aplikacje w której użytkownik poda liczbę a program wyda resztę w nominałach 1, 2, 5, 10, 20, 50, 100.
 Nominały mają być wyświetlone jako zdjęcia tych nominałów.
+form.cs
+namespace _23._10._24r
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double reszta;
+            double a = double.Parse(textBox1.Text);
+            int i = 0;
+            double[] nominaly = { 200, 100, 50, 20, 10, 5, 2, 1 };
+
+            while (a > 0)
+            {
+                if (a >= nominaly[i])
+                {
+                    double ln = a / nominaly[i];
+                    a = Math.Round(a - nominaly[i] * ln, 2);
+
+                    MessageBox.Show("Wypłacono: " + ln + " x " + nominaly[i] + " PLN");
+                }
+            }
+        }
+    }
+}
 
 Zad.2 - Napisz aplikacje w której użytkownik poda datę urodzenia a program zsumuje cyfry i pokaże czy liczba jest sigmą.
 Liczba która jest sigmą to liczba która składa się z dwóch takich samych cyfr np. 11, 22, 33, itd.
+namespace _30._10._24r
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        public bool CzySigma(int n)
+        {
+            return true;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox1.Text);
+            if (CzySigma(a) == true)
+            {
+                MessageBox.Show("Jesteś sigmą");
+            }
+            else
+            {
+                MessageBox.Show("Nie jesteś sigmą");
+            }
+        }
+    }
+}
