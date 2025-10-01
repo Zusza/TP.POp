@@ -1,0 +1,5 @@
+Dana jest tablica 100-elementowa.
+Napisz program w java, który użyje 3 wątków. Jeden z nich będzie uzupełniać tablicę jedynkami od lewej, drugi będzie uzupełniał ją dwójkami od prawej, a trzeci będzie ją co sekundę wyświetlał. Dodajcie sleep(100) (na 100ms) w dodających wątkach.
+
+
+Losuje 2 liczby, 1 wątek liczy nwd, 2 wątek liczy nww a 3 wątek to wyświetla.
