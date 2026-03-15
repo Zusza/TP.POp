@@ -1,0 +1,93 @@
+//W twojej aplikacji rodzi się wiadomość. Krótka, zwyczajna - ale ktoś musi zdecydować co się z nią stanie dalej.
+//Najpierw pojawia się kronikarz.
+//Jego zadaniem jest zapisać że coś się wydarzyło. Może mówić do konsoli, a może szeptać do pliku.
+//Potem przychodzi archiwista.
+//On przechowuje wiadomości na dłużej. Może zapisać je w bazie danych, albo odłożyć do pamięci aplikacji.
+//Klasa która obsługuje wiadomość, nie zna ich twarzy. Zna tylko ich role - obietnice zapisane w interfejsach.
+//To ktoś z zewnątrz zdecyduje, który kronikarz i który archiwista zostaną zaproszeni do współpracy.
+
+//DI kaskadowe - wstrzyknięcie 1 i wstrzyknięcie wstrzykniętego do drugiego!!!
+//---------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace _12._03._26r
+{
+    interface Kronikarz
+    {
+        void ZapiszWydarzenie(string w);
+    }
+    interface Archiwista
+    {
+        void ZapiszDluzej(string d);
+    }
+    class Konsola : Kronikarz
+    {
+        public void ZapiszWydarzenie(string w)
+        {
+            Console.WriteLine(w);
+        }
+    }
+    class DoPliku : Kronikarz
+    {
+        public void ZapiszWydarzenie(string w)
+        {
+            File.AppendAllText("../../plik.txt", w);
+        }
+    }
+    class BazaDanych : Archiwista
+    {
+        public void ZapiszDluzej(string d)
+        {
+            //zapis do bazy danych
+        }
+    }
+    class Casche : Archiwista
+    {
+        public void ZapiszDluzej(string w)
+        {
+            //zapis do cashe
+        }
+    }
+    class Wiadomosc
+    {
+        Kronikarz kronikarz;
+        Archiwista archiwista;
+
+        public Wiadomosc(Kronikarz kro, Archiwista arc)
+        {
+            kronikarz = kro;
+            archiwista = arc;
+        }
+
+        public string Tytul;
+        public string Wiado;
+
+        public void zapiszWiado(string tytul, string wiado)
+        {
+            Tytul = tytul;
+            Wiado = wiado;
+
+            string zapi = $"Tytuł: {tytul}, Wiadomość: {wiado}";
+
+            kronikarz.ZapiszWydarzenie(zapi);
+            archiwista.ZapiszDluzej(zapi);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Wiadomosc wiadomosc = new Wiadomosc(new Konsola(), new BazaDanych());
+            wiadomosc.zapiszWiado("Tytuł1", "Bajo jajo");
+            Wiadomosc wiadomosc2 = new Wiadomosc(new DoPliku(), new Casche());
+            wiadomosc2.zapiszWiado("Tytuł2", "Buja");
+        }
+    }
+}
