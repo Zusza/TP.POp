@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DI_powrorka
+{
+    interface IRejestrWypozyczen
+    {
+        void Zapisz(string uzytkownik, string tytul);
+    }
+    interface ISprawdzKary
+    {
+        bool MaKare(string uzytkownik);
+    }
+    class KonsolaRejestr : IRejestrWypozyczen
+    {
+        public void Zapisz(string uzytkownik, string tytul)
+        {
+            Console.WriteLine($"Wypożyczono {tytul} przez {uzytkownik}");
+        }
+    }
+    class PlikRejestr : IRejestrWypozyczen
+    {
+        public void Zapisz(string uzytkownik, string tytul)
+        {
+            File.AppendAllText("../../wyporzyczenia.txt", $"Wypożyczono {tytul} przez {uzytkownik}");
+        }
+    }
+    class BrakKary : ISprawdzKary
+    {
+        public bool MaKare(string uzytkownik)
+        {
+            return false;
+        }
+    }
+    class StalaKara : ISprawdzKary
+    {
+        private List<string> karani;
+        public StalaKara(List<string> kary)
+        {
+            karani = kary;
+        }
+        public bool MaKare(string uzytkownik)
+        {
+            return karani.Contains(uzytkownik);
+        }
+    }
+    class Biblioteka
+    {
+        private IRejestrWypozyczen rejestry;
+        private ISprawdzKary kary;
+        public Biblioteka(IRejestrWypozyczen rej,  ISprawdzKary kar)
+        {
+            rejestry = rej;
+            kary = kar;
+        }
+        public void Wypozycz(string uzytkownik, string tytul)
+        {
+            if (kary.MaKare(uzytkownik))
+            {
+                Console.WriteLine($"Użytkownik {uzytkownik} ma kare, nie można wypożyczyć");
+                return;
+            }
+            rejestry.Zapisz(uzytkownik, tytul);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Biblioteka biblioteka = new Biblioteka(new KonsolaRejestr, new BrakKary);
+            Biblioteka biblioteka2 = new Biblioteka(new PlikRejestr, new StalaKara(new List<string> {"Jan Kowalski"}));
+
+            biblioteka.Wypozycz("Magda", "Z mgły zrodzony");
+            biblioteka.Wypozycz("Zosia", "Bohater wieków");
+            biblioteka2.Wypozycz("Jan Kowalski", "Mały Książę");
+            biblioteka2.Wypozycz("Edmund", "Studnia wstąpienia");
+        }
+    }
+}
