@@ -26,7 +26,7 @@ namespace DI_powrorka
     {
         public void Zapisz(string uzytkownik, string tytul)
         {
-            File.AppendAllText("../../wyporzyczenia.txt", $"Wypożyczono {tytul} przez {uzytkownik}");
+            File.AppendAllText("../../wypozyczenia.txt", $"Wypożyczono {tytul} przez {uzytkownik}");
         }
     }
     class BrakKary : ISprawdzKary
